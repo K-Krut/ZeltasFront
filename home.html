@@ -5,35 +5,42 @@
     <title>KEK</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/main_style.css">
 </head>
 <body>
 
 <header>
     <nav>
-        <div class="burger">
-            <div class="line1"></div>
-            <div class="line1"></div>
-            <div class="line1"></div>
-        </div>
+
         <ul class="nav-links">
-            <li><a href="#" class="icon menu-icon"></a></li>
+<!--            <li><a href="#" class="icon menu-icon"></a></li>-->
+            <div class="hamburger-menu ">
+                <input id="menu__toggle" type="checkbox" />
+                <label class="menu__btn" for="menu__toggle">
+                    <span></span>
+                </label>
+
+                <ul class="menu__box">
+                    <li><a class="menu__item" href="#">Home</a></li>
+                    <li><a class="menu__item" href="#">About</a></li>
+                    <li><a class="menu__item" href="#">Team</a></li>
+                    <li><a class="menu__item" href="#">Contact</a></li>
+                    <li><a class="menu__item" href="#">Twitter</a></li>
+                </ul>
+            </div>
             <li><a href="#" class="icon catalog-icon"></a></li>
         </ul>
         <div class="logo">
             <h4 style="margin-top: auto">želtas</h4>
         </div>
         <ul class="nav-links">
-            <li><a href="#" class="icon search-icon"></a></li>
-            <li><a href="#" class="icon basket-icon"></a></li>
+            <li class="invisible">
+                <a href="#" class="icon search-icon"></a>
+            </li>
+            <li><a href="#" class="icon basket-icon "></a></li>
         </ul>
-
     </nav>
     <script src="js/bootstrap.bundle.js"></script>
-    <script src="js/navbar.js"></script>
-    <script src="js/navbar.js"></script>
-    <script src="js/navbar.js"></script>
-    <script src="js/navbar.js"></script>
 </header>
 </body>
 </html>
