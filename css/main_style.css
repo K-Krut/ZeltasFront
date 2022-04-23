@@ -28,10 +28,13 @@ nav {
     font-family: 'Giovanna', sans-serif;
     font-style: normal;
     font-weight: 700;
-    font-size: 96px;
+    font-size: 80px;
     line-height: 115px;
 }
 
+/*nav .logo .h4 {*/
+/*    top: 50%;*/
+/*}*/
 .nav-links {
     display: flex;
     justify-content: space-around;
@@ -95,28 +98,38 @@ nav {
         -ms-overflow-x: hidden;
     }
 
-    .nav-links li {
+    .nav-links li .search-icon, .catalog-icon  {
         opacity: 0;
     }
+    menu__box {
+        width: 50%;
+    }
 }
+
+
 
 #menu__toggle {
     opacity: 0;
 }
+
 #menu__toggle:checked + .menu__btn > span {
     transform: rotate(45deg);
 }
+
 #menu__toggle:checked + .menu__btn > span::before {
     top: 0;
     transform: rotate(0deg);
 }
+
 #menu__toggle:checked + .menu__btn > span::after {
     top: 0;
     transform: rotate(90deg);
 }
+
 #menu__toggle:checked ~ .menu__box {
     left: 0 !important;
 }
+
 .menu__btn {
     position: absolute;
     display: flex;
@@ -152,14 +165,14 @@ nav {
 .menu__box {
     display: block;
     position: fixed;
-    top: 0;
+    top: 16vh;
     left: -100%;
-    width: 300px;
+    width: 20%;
     height: 100%;
     margin: 0;
     padding: 100px 0;
     list-style: none;
-    background-color: #282828;
+    /*background: linear-gradient(rgba(40, 40, 40, 0.1), rgba(0, 0, 0, 0.025));*/
     box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
     transition-duration: .25s;
 }
