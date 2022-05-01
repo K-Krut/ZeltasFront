@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>KEK</title>
+    <title>Home</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,10 +12,10 @@
     <script type="text/javascript" src="js/lightslider.js"></script>
 </head>
 <body>
-<header>
+<header class='nav-scrolled'>
     <nav style="margin: auto; align-content: center">
         <ul class="nav-links">
-            <div class="hamburger-menu">
+            <div class="hamburger-menu" style="height: 45px; padding-top: -12.8px;">
                 <input id="menu-toggle" type="checkbox"/>
                 <label class="menu-btn" for="menu-toggle">
                     <span></span>
@@ -444,7 +444,31 @@
         </div>
     </div>
 </footer>
+
 <script src="js/main.js"></script>
+<script>
+    const header = document.querySelector('header');
+    const sectionIntro = document.querySelector('.Intro');
+    const sectionOptions = {
+        rootMargin: '-200px 0px 0px 0px'
+    }
+    const sectionObserved = new IntersectionObserver(
+        function (entries, sectionObserved) {
+            entries.forEach(entry => {
+                if(!entry.isIntersecting) {
+                    header.classList.add('nav-scrolled');
+                } else {
+                    header.classList.remove('nav-scrolled')
+                }
+            })
+        },  {
+            rootMargin: '-500px 0px 0px 0px'
+        }
+    );
+
+    sectionObserved.observe(sectionIntro);
+
+</script>
 </body>
 </html>
 
