@@ -79,29 +79,29 @@ nav {
 
 /****************************************************/
 
-#menu__toggle {
+#menu-toggle {
     opacity: 0;
 }
 
-#menu__toggle:checked + .menu__btn > span {
+#menu-toggle:checked + .menu-btn > span {
     transform: rotate(45deg);
 }
 
-#menu__toggle:checked + .menu__btn > span::before {
+#menu-toggle:checked + .menu-btn > span::before {
     top: 0;
     transform: rotate(0deg);
 }
 
-#menu__toggle:checked + .menu__btn > span::after {
+#menu-toggle:checked + .menu-btn > span::after {
     top: 0;
     transform: rotate(90deg);
 }
 
-#menu__toggle:checked ~ .menu__box {
+#menu-toggle:checked ~ .menu-box {
     left: 0 !important;
 }
 
-.menu__btn {
+.menu-btn {
     position: absolute;
     display: flex;
     justify-content: space-around;
@@ -116,9 +116,9 @@ nav {
     z-index: 1;
 }
 
-.menu__btn > span,
-.menu__btn > span::before,
-.menu__btn > span::after {
+.menu-btn > span,
+.menu-btn > span::before,
+.menu-btn > span::after {
     display: block;
     /*position: absolute;*/
     width: 100%;
@@ -127,17 +127,17 @@ nav {
     transition-duration: .25s;
 }
 
-.menu__btn > span::before {
+.menu-btn > span::before {
     content: url("../images/buttons/menu_burger_button.svg");
     /*top: 0px;*/
 }
 
-.menu__btn > span::after {
+.menu-btn > span::after {
     content: '';
     /*top: 8px;*/
 }
 
-.menu__box {
+.menu-box {
     display: block;
     position: fixed;
     top: 16vh;
@@ -152,7 +152,7 @@ nav {
     transition-duration: .25s;
 }
 
-.menu__item {
+.menu-item {
     display: block;
     padding: 25px 24px;
     color: #333;
@@ -163,7 +163,7 @@ nav {
     transition-duration: .25s;
 }
 
-.menu__item:hover {
+.menu-item:hover {
     background-color: #CFD8DC;
 }
 
