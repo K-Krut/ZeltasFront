@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Home</title>
+    <title>KEK</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -40,46 +40,47 @@
         </ul>
     </nav>
 </header>
-<div class="Intro" style=" overflow: hidden;">
-    <div class="container" style="margin-right: auto; margin-left: auto">
-        <input type="radio" name="slider" id="item-1" checked>
-        <input type="radio" name="slider" id="item-2">
-        <input type="radio" name="slider" id="item-3">
-        <div class="cards">
-            <label class="card" for="item-1" id="song-1">
-                <h1 style="bottom: 0; position: absolute; left:0; right: 0">WOLF</h1>
-                <div class="rings">
-                    <div class="big-ring">
-                        <div class="small-ring">
-                            <img style="width: 90%; height: auto;" src="images/jewelry/wolf_neckle.png" alt="Wolf">
+
+<div class="body-class">
+    <div class="Intro" style=" overflow: hidden;">
+        <div class="container" style="margin-right: auto; margin-left: auto">
+            <input type="radio" name="slider" id="item-1" checked>
+            <input type="radio" name="slider" id="item-2">
+            <input type="radio" name="slider" id="item-3">
+            <div class="cards">
+                <label class="card" for="item-1" id="song-1">
+                    <h1 style="bottom: 0; position: absolute; left:0; right: 0">WOLF</h1>
+                    <div class="rings">
+                        <div class="big-ring">
+                            <div class="small-ring">
+                                <img style="width: 90%; height: auto;" src="images/jewelry/wolf_neckle.png" alt="Wolf">
+                            </div>
                         </div>
                     </div>
-                </div>
-            </label>
-            <label class="card" for="item-2" id="song-2">
-                <h1 style="bottom: 0; position: absolute; left:0; right: 0">BRACELET</h1>
-                <div class="rings">
-                    <div class="big-ring">
-                        <div class="small-ring" style="">
-                            <img src="images/jewelry/bracelet_dragon.png" alt="Bracelet">
+                </label>
+                <label class="card" for="item-2" id="song-2">
+                    <h1 style="bottom: 0; position: absolute; left:0; right: 0">BRACELET</h1>
+                    <div class="rings">
+                        <div class="big-ring">
+                            <div class="small-ring" style="">
+                                <img src="images/jewelry/bracelet_dragon.png" alt="Bracelet">
+                            </div>
                         </div>
                     </div>
-                </div>
-            </label>
-            <label class="card" for="item-3" id="song-3">
-                <h1>CAT</h1>
-                <div class="rings">
-                    <div class="big-ring">
-                        <div class="small-ring">
-                            <img src="images/jewelry/sculpture_cat.png" alt="Cat">
+                </label>
+                <label class="card" for="item-3" id="song-3">
+                    <h1>CAT</h1>
+                    <div class="rings">
+                        <div class="big-ring">
+                            <div class="small-ring">
+                                <img src="images/jewelry/sculpture_cat.png" alt="Cat">
+                            </div>
                         </div>
                     </div>
-                </div>
-            </label>
+                </label>
+            </div>
         </div>
     </div>
-</div>
-<div class="body-class">
     <section class="Article-part wave-pattern">
         <div class="right-col">
             <img src="images/photos/article_img.jpg">
@@ -218,7 +219,6 @@
                 </div>
             </ul>
         </div>
-    </section>
     <style>
         ul {
             list-style: none;
@@ -282,6 +282,7 @@
             justify-content: center;
             background-image: url("images/patterns/back_4_400_2.png");
         }
+
         .product-bg-appear {
             justify-content: center;
             background-image: url("images/patterns/back_4_400_3.png");
@@ -376,25 +377,7 @@
             }
         }
     </style>
-    <script src="js/script.js" type="text/javascript"></script>
-    <script>
-        $(document).ready(function () {
-            $(".product-box").hover(
-                function () {
-                    $(this).addClass('product-bg-appear');
-                    $(this).removeClass('product-bg-fade');
-                    $(this).find('.details').stop(true, true).css({'opacity': '1'})
-                    $(this).find('.product-title').stop(true, true).css({'opacity': '.7'})
-                },
-                function () {
-                    $(this).addClass('product-bg-fade');
-                    $(this).removeClass('product-bg-appear');
-                    $(this).find('.details').stop(true, true).css({'opacity': '.2'})
-                    $(this).find('.product-title').stop(true, true).css({'opacity': '.2'})
-                }
-            );
-        });
-    </script>
+
     </section>
 </div>
 <footer class="Intro-footer">
@@ -468,6 +451,25 @@
 
     sectionObserved.observe(sectionIntro);
 
+</script>
+<script src="js/script.js" type="text/javascript"></script>
+<script>
+    $(document).ready(function () {
+        $(".product-box").hover(
+            function () {
+                $(this).addClass('product-bg-appear');
+                $(this).removeClass('product-bg-fade');
+                $(this).find('.details').stop(true, true).css({'opacity': '1'})
+                $(this).find('.product-title').stop(true, true).css({'opacity': '.7'})
+            },
+            function () {
+                $(this).addClass('product-bg-fade');
+                $(this).removeClass('product-bg-appear');
+                $(this).find('.details').stop(true, true).css({'opacity': '.2'})
+                $(this).find('.product-title').stop(true, true).css({'opacity': '.2'})
+            }
+        );
+    });
 </script>
 </body>
 </html>
