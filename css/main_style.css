@@ -6,20 +6,8 @@
 
 body {
     background-image: url("../images/patterns/background_main_2.png");
-    /*background: #232323;*/
-    /*color: #cdcdcd;*/
 }
 
-
-/*nav {*/
-/*    display: flex;*/
-/*    width: 100%;*/
-/*    height: 115px;*/
-/*    justify-content: space-around;*/
-/*    align-items: center;*/
-/*    min-height: 8vh;*/
-/*    font-family: Giovanna, sans-serif;*/
-/*}*/
 
 
 nav {
@@ -38,6 +26,15 @@ nav {
 .nav-scrolled {
     display: none;
 }
+.logo a {
+    color: #A08A7E;
+    font-family: Giovanna, sans-serif;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 25px;
+}
+
 .logo {
     color: #A08A7E;
     text-transform: uppercase;
@@ -57,7 +54,6 @@ nav {
 }
 
 .nav-links li {
-    z-index: 200;
     list-style: none;
 }
 
@@ -76,6 +72,7 @@ nav {
 }
 
 .menu-icon {
+    z-index: 999;
     content: url("../images/buttons/menu_burger_button.svg");
 }
 
@@ -96,6 +93,7 @@ nav {
 /****************************************************/
 
 #menu-toggle {
+    /*z-index: 999;*/
     top:12.8px;
     position: relative;
     opacity: 0;
@@ -123,7 +121,7 @@ nav {
     width: 45px;
     height: 45px;
     cursor: pointer;
-    z-index: 200;
+    z-index: 999;
 }
 
 .menu-btn > span,
@@ -144,17 +142,16 @@ nav {
 }
 
 .menu-box {
-    z-index: 50;
+    z-index: 500;
     display: block;
     position: fixed;
-    top: 115px;
+    top: 85px;
     left: -100%;
     width: 30%;
     height: 100%;
     margin: 0;
     padding: 100px 0;
     list-style: none;
-    /*background: rgba(30, 29, 28, 1);*/
     background-image: url("../images/patterns/background_main_2.png");
     box-shadow: 2px 2px 1px 2px rgba(0, 0, 0, 0.2);
     transition-duration: .25s;
@@ -183,7 +180,7 @@ nav {
     height: 765px;
     left: 0;
     right: 0;
-    margin-top: 17.5px;
+    margin-top: 18px;
     display: flex;
     position: relative;
     transition: background .4s ease-in;
@@ -234,16 +231,14 @@ input[type=radio] {
 
 .container {
     margin-top: 115px;
-    /*padding: 0;*/
+    margin-right: auto;
+    margin-left: auto;
     width: 100%;
     height: 100%;
     max-width: 550px;
     max-height: 550px;
     transform-style: preserve-3d;
-    /*display: flex;*/
-    /*justify-content: center;*/
     flex-direction: column;
-    /*align-items: center;*/
 }
 
 .cards h1 {
@@ -277,14 +272,40 @@ input[type=radio] {
     height: 100%;
 }
 
-/*.spin-ring {*/
-/*    animation-name: spin;*/
-/*    animation-duration: 5000ms;*/
-/*    animation-iteration-count: infinite;*/
-/*    animation-timing-function: linear;*/
-/*}*/
+
+
+#item-1:checked ~ .cards #song-3, #item-2:checked ~ .cards #song-1, #item-3:checked ~ .cards #song-2 {
+    transform: translatex(-100%) scale(.7);
+    opacity: .5;
+    z-index: 0;
+}
+
+#item-1:checked ~ .cards #song-2, #item-2:checked ~ .cards #song-3, #item-3:checked ~ .cards #song-1 {
+    transform: translatex(100%) scale(.7);
+    opacity: .5;
+    z-index: 0;
+}
+
+#item-1:checked ~ .cards #song-1, #item-2:checked ~ .cards #song-2, #item-3:checked ~ .cards #song-3 {
+    transform: translatex(0) scale(1);
+    opacity: 1;
+    z-index: 1;
+}
+
+#item-1:checked ~ .cards #song-1, #item-2:checked ~ .cards #song-2, #item-3:checked ~ .cards #song-3 {
+    transform: translatex(0) scale(1);
+    opacity: 1;
+    z-index: 1;
+
+img {
+    box-shadow: 0 0 5px 0 rgba(81, 81, 81, 0.47);
+}
+}
+
+/**********************************************************************/
 
 .Article-part {
+    margin-top: 25px;
     height: 750px;
     overflow: hidden;
     align-items: center;
@@ -389,34 +410,6 @@ input[type=radio] {
 
 /***************************************************************/
 
-
-#item-1:checked ~ .cards #song-3, #item-2:checked ~ .cards #song-1, #item-3:checked ~ .cards #song-2 {
-    transform: translatex(-100%) scale(.7);
-    opacity: .5;
-    z-index: 0;
-}
-
-#item-1:checked ~ .cards #song-2, #item-2:checked ~ .cards #song-3, #item-3:checked ~ .cards #song-1 {
-    transform: translatex(100%) scale(.7);
-    opacity: .5;
-    z-index: 0;
-}
-
-#item-1:checked ~ .cards #song-1, #item-2:checked ~ .cards #song-2, #item-3:checked ~ .cards #song-3 {
-    transform: translatex(0) scale(1);
-    opacity: 1;
-    z-index: 1;
-}
-
-#item-1:checked ~ .cards #song-1, #item-2:checked ~ .cards #song-2, #item-3:checked ~ .cards #song-3 {
-    transform: translatex(0) scale(1);
-    opacity: 1;
-    z-index: 1;
-
-    img {
-        box-shadow: 0 0 5px 0 rgba(81, 81, 81, 0.47);
-    }
-}
 
 .Intro-footer {
     height: 700px;
@@ -629,14 +622,17 @@ input[type=radio] {
 }
 
 
+.Main-footer .right-col-ft {
+    width: 50%;
+}
 
-.Product-Gallery .collection-title {
+.collection-title {
     position: relative;
     align-items: center;
     text-align: center;
     padding-bottom: 50px;
 }
-.Product-Gallery .collection-title h1 {
+.collection-title h1 {
     position: relative;
     font-family: 'GiovannaBold', sans-serif;
     font-style: normal;
@@ -676,6 +672,7 @@ input[type=radio] {
     font-family: 'AverageRegular', sans-serif;
     font-style: normal;
     font-size: 17px;
+    padding: 5px;
     display: flex;
     align-items: center;
     text-align: center;
@@ -692,9 +689,12 @@ input[type=radio] {
     padding-bottom: 100px;
 }
 
-.Product-Gallery .navigation-collections {
+.navigation-collections  {
     width: 30%;
     height: 100%;
+}
+.navigation-collections a {
+    text-decoration: none;
 }
 
 .Product-Gallery .container-fluid {
@@ -723,6 +723,53 @@ input[type=radio] {
     background-image: url("../images/patterns/el1-300-op-80.png");
 }
 
+.Product-Gallery .price {
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+}
+
+.Product-Gallery .price h1, h2, h3 {
+    font-family: 'Giovanna', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    color: #D5C7BF;
+}
+
+.Product-Gallery .product-title {
+    position: relative;
+    font-family: 'AverageRegular', sans-serif;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 20px;
+    color: #A08A7E;
+    top: 15px;
+}
+
+.Product-Gallery .details h1 {
+    font-family: 'AverageRegular', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    color: #D2A88F;
+    text-align: left;
+}
+
+.title-in-progress {
+    position: relative;
+    margin: 250px 0 200px 0;
+    text-align: center;
+    font-family: 'GiovannaBold', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 60px;
+    color: #A08A7E;
+    text-shadow: 4px 8px 10px rgba(199, 171, 155, 0.4);
+}
+
+
 .opacity-8 {
     opacity: .8;
 }
@@ -731,16 +778,6 @@ input[type=radio] {
     opacity: 0;
 }
 
-.wd-80 {
-    width: 80%;
-}
-.ht-80 {
-    height: 80%;
-}
-.wd-ht-8 {
-    width: 80%;
-    height: 80%;
-}
 /*****************************************************************************************************************/
 
 
@@ -775,8 +812,8 @@ input[type=radio] {
     .body {
         -ms-overflow-x: hidden;
     }
-    .logo {
-        text-align: center;
+    .Intro {
+
     }
 
     .nav-links {
@@ -786,31 +823,138 @@ input[type=radio] {
     .logo {
         width: 60%;
         font-size: 57px;
+        text-align: center;
     }
+
+    #item-1:checked ~ .cards #song-3, #item-2:checked ~ .cards #song-1, #item-3:checked ~ .cards #song-2 {
+        transform: translatex(-80%) scale(.7);
+        opacity: 0;
+        z-index: 5;
+    }
+
+    #item-1:checked ~ .cards #song-2, #item-2:checked ~ .cards #song-3, #item-3:checked ~ .cards #song-1 {
+        transform: translatex(80%) scale(.7);
+        opacity: 0;
+        z-index: 5;
+    }
+
+
 }
 
 @media screen and (max-width: 768px) {
     .body {
         -ms-overflow-x: hidden;
     }
+    .nav {
+        -ms-overflow-x: hidden;
+        max-width: 768px;
+        height: 90px;
+    }
+    .nav ul {
+        width: 100px;
+    }
+
+
+    .logo {
+        width: 60%;
+        font-size: 50px;
+        text-align: center;
+    }
+
+
 
     .nav {
         -ms-overflow-x: hidden;
+        width: 10%;
+    }
+
+    .nav-links {
+
     }
 
     .nav-links li .search-icon, .catalog-icon {
-        opacity: 0;
+        display: none;
     }
 
     .menu-box {
         width: 50%;
     }
+    .menu-item {
+
+    }
+
+    #item-1:checked ~ .cards #song-3, #item-2:checked ~ .cards #song-1, #item-3:checked ~ .cards #song-2 {
+        transform: translatex(-80%) scale(.7);
+        opacity: 0;
+        z-index: 5;
+    }
+
+    #item-1:checked ~ .cards #song-2, #item-2:checked ~ .cards #song-3, #item-3:checked ~ .cards #song-1 {
+        transform: translatex(80%) scale(.7);
+        opacity: 0;
+        z-index: 5;
+    }
+
 }
 
 @media (max-width: 720px) {
+
+
+    .nav-links li .search-icon, .catalog-icon {
+        display: none;
+    }
+
+
+    .product-item {
+        height: 250px;
+    }
+
+    .details p {
+        font-size: 16px;
+        width: 250px;
+    }
+    #item-1:checked ~ .cards #song-3, #item-2:checked ~ .cards #song-1, #item-3:checked ~ .cards #song-2 {
+        transform: translatex(-80%) scale(.7);
+        opacity: 0;
+        z-index: 5;
+    }
+
+    #item-1:checked ~ .cards #song-2, #item-2:checked ~ .cards #song-3, #item-3:checked ~ .cards #song-1 {
+        transform: translatex(80%) scale(.7);
+        opacity: 0;
+        z-index: 5;
+    }
+
+}
+
+@media (max-width: 390px) {
+
     .box {
         width: 94%;
         height: 500px;
+    }
+
+    .nav {
+        height: 50%;
+    }
+
+    .logo {
+        width: 30%;
+        font-size: 40px;
+        text-align: center;
+    }
+    .card {
+        width: 40%;
+        height: 40%;
+        align-content: center;
+        justify-content: center;
+    }
+    .big-ring {
+        width: 300px;
+        height: 300px;
+    }
+    .nav-links li .search-icon, .catalog-icon {
+        display: none;
     }
 
     .product-item {
@@ -820,6 +964,18 @@ input[type=radio] {
     .details p {
         font-size: 16px;
         width: 250px;
+    }
+
+    #item-1:checked ~ .cards #song-3, #item-2:checked ~ .cards #song-1, #item-3:checked ~ .cards #song-2 {
+        transform: translatex(-80%) scale(.7);
+        opacity: 0;
+        z-index: 5;
+    }
+
+    #item-1:checked ~ .cards #song-2, #item-2:checked ~ .cards #song-3, #item-3:checked ~ .cards #song-1 {
+        transform: translatex(80%) scale(.7);
+        opacity: 0;
+        z-index: 5;
     }
 
 }
