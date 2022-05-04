@@ -38,6 +38,15 @@ nav {
 .nav-scrolled {
     display: none;
 }
+.logo a {
+    color: #A08A7E;
+    font-family: Giovanna, sans-serif;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 25px;
+}
+
 .logo {
     color: #A08A7E;
     text-transform: uppercase;
@@ -183,7 +192,7 @@ nav {
     height: 765px;
     left: 0;
     right: 0;
-    margin-top: 17.5px;
+    margin-top: 18px;
     display: flex;
     position: relative;
     transition: background .4s ease-in;
@@ -285,6 +294,7 @@ input[type=radio] {
 /*}*/
 
 .Article-part {
+    margin-top: 25px;
     height: 750px;
     overflow: hidden;
     align-items: center;
@@ -629,14 +639,17 @@ input[type=radio] {
 }
 
 
+.Main-footer .right-col-ft {
+    width: 50%;
+}
 
-.Product-Gallery .collection-title {
+.collection-title {
     position: relative;
     align-items: center;
     text-align: center;
     padding-bottom: 50px;
 }
-.Product-Gallery .collection-title h1 {
+.collection-title h1 {
     position: relative;
     font-family: 'GiovannaBold', sans-serif;
     font-style: normal;
@@ -692,9 +705,12 @@ input[type=radio] {
     padding-bottom: 100px;
 }
 
-.Product-Gallery .navigation-collections {
+.navigation-collections  {
     width: 30%;
     height: 100%;
+}
+.navigation-collections a {
+    text-decoration: none;
 }
 
 .Product-Gallery .container-fluid {
@@ -723,6 +739,53 @@ input[type=radio] {
     background-image: url("../images/patterns/el1-300-op-80.png");
 }
 
+.Product-Gallery .price {
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+}
+
+.Product-Gallery .price h1, h2, h3 {
+    font-family: 'Giovanna', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    color: #D5C7BF;
+}
+
+.Product-Gallery .product-title {
+    position: relative;
+    font-family: 'AverageRegular', sans-serif;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 20px;
+    color: #A08A7E;
+    top: 15px;
+}
+
+.Product-Gallery .details h1 {
+    font-family: 'AverageRegular', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    color: #D2A88F;
+    text-align: left;
+}
+
+.title-in-progress {
+    position: relative;
+    margin: 250px 0 200px 0;
+    text-align: center;
+    font-family: 'GiovannaBold', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 60px;
+    color: #A08A7E;
+    text-shadow: 4px 8px 10px rgba(199, 171, 155, 0.4);
+}
+
+
 .opacity-8 {
     opacity: .8;
 }
@@ -731,16 +794,6 @@ input[type=radio] {
     opacity: 0;
 }
 
-.wd-80 {
-    width: 80%;
-}
-.ht-80 {
-    height: 80%;
-}
-.wd-ht-8 {
-    width: 80%;
-    height: 80%;
-}
 /*****************************************************************************************************************/
 
 
