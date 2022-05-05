@@ -12,7 +12,6 @@
     <script type="text/javascript" src="js/lightslider.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
-    <script type="text/javascript" src="js/script.js"></script>
     <script type="text/javascript" src="js/products-slider-animation.js"></script>
 </head>
 <body>
@@ -20,7 +19,7 @@
 <header class='nav-scrolled'>
     <nav style="margin: auto; align-content: center">
         <ul class="nav-links right-part-links">
-            <div class="hamburger-menu" style="height: 45px; padding-top: -12.8px;">
+            <div class="hamburger-menu">
                 <input id="menu-toggle" type="checkbox" style="z-index: 999"/>
                 <label class="menu-btn" for="menu-toggle" style="z-index: 999">
                     <span style="z-index: 999"></span>
@@ -47,7 +46,7 @@
 </header>
 
 <div class="body-class">
-    <div class="Intro" style=" overflow: hidden;">
+    <div id="Into" class="Intro" style=" overflow: hidden;">
         <div class="container">
             <input type="radio" name="slider" id="item-1" checked>
             <input type="radio" name="slider" id="item-2">
@@ -86,6 +85,18 @@
             </div>
         </div>
     </div>
+    <div id="Intro-mobile">
+        <div class="card-mobile">
+            <div class="rings">
+                <div class="big-ring-mb">
+                    <div class="small-ring-mb">
+                        <img src="images/jewelry/mice1.png" alt="Wolf">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="js/header-animation.js"></script>
+    </div>
     <section class="Article-part wave-pattern">
         <div class="right-col">
             <img src="images/photos/article_img.jpg">
@@ -122,9 +133,9 @@
             </div>
         </div>
     </section>
-    <section id="Product-slider" class="Product-slider">
+    <section id="Product-slider">
         <div class="container-products">
-            <ul id="autoWidth">
+            <ul id="autoWidth" class="">
                 <div class="item-1 product-box product-bg-fade">
                     <h2 class="product-title">Figurine Owl</h2>
                     <img class="product-item" src="images/jewelry/sculpture_owl.png">
@@ -225,164 +236,6 @@
                 </div>
             </ul>
         </div>
-        <style>
-            ul {
-                list-style: none;
-            }
-
-            a {
-                text-decoration: none;
-            }
-
-            .Product-slider {
-                height: 700px;
-                width: 100%;
-                top: -225px;
-                bottom: 200px;
-                position: relative;
-                overflow: hidden;
-                align-items: center;
-                display: flex;
-                /*padding-top: 400px;*/
-            }
-
-            .container-products {
-                position: relative;
-                width: 100%;
-                top: 0;
-                /*height: 100vh;*/
-                display: flex;
-                overflow: visible;
-                justify-content: center;
-                /*align-items: center;*/
-            }
-
-            .details {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                width: 350px;
-                opacity: 0.2;
-            }
-
-            .product-button {
-                right: 0;
-                position: absolute;
-                content: url("images/buttons/product-button.svg");
-            }
-
-            .product-box {
-                width: 400px;
-                height: 650px; /*border-radius: 10px;*/
-                position: relative;
-                box-shadow: 0 0 8px 8px rgba(0, 0, 0, 0.25);
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                box-sizing: border-box;
-                margin: 20px 112px;
-            }
-
-            .product-bg-fade {
-                justify-content: center;
-                background-image: url("images/patterns/back_4_400_2.png");
-            }
-
-            .product-bg-appear {
-                justify-content: center;
-                background-image: url("images/patterns/back_4_400_3.png");
-            }
-
-            .product-item {
-                height: 400px;
-                max-height: 100%;
-                max-width: 100%;
-            }
-
-            .left-col-pr {
-                left: 0;
-                width: 75%;
-                flex-direction: column;
-                position: relative;
-                display: flex;
-                text-align: left;
-            }
-
-            .right-col-pr {
-                right: 0;
-                width: 25%;
-                position: relative;
-                display: flex;
-            }
-
-            .right-col-pr .price {
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                position: absolute;
-            }
-
-            .price h1, h2, h3 {
-                font-family: 'Giovanna', sans-serif;
-                font-style: normal;
-                font-weight: 700;
-                font-size: 30px;
-                text-align: center;
-                color: #D5C7BF;
-            }
-
-            .right-col-pr h2 {
-                position: relative;
-            }
-
-            .product-title {
-                font-family: 'AverageRegular', sans-serif;
-                font-style: normal;
-                font-weight: 200;
-                font-size: 35px;
-                line-height: 40px;
-                color: #FAEBE2CC;
-                opacity: 0.2;
-            }
-
-            .details p {
-                font-family: 'AverageRegular', sans-serif;
-                font-style: normal;
-                font-weight: 100;
-                font-size: 13px;
-                line-height: 30px;
-                text-align: left;
-                color: #FAEBE2;
-                opacity: .5;
-            }
-
-            .details h1 {
-                font-family: 'AverageRegular', sans-serif;
-                font-style: normal;
-                font-weight: 400;
-                font-size: 18px;
-                line-height: 22px;
-                color: #D2A88F;
-                text-align: left;
-            }
-
-            @media (max-width: 720px) {
-                .box {
-                    width: 94%;
-                    height: 500px;
-                }
-
-                .product-item {
-                    height: 250px;
-                }
-
-                .details p {
-                    font-size: 16px;
-                    width: 250px;
-                }
-            }
-        </style>
 
     </section>
 </div>
@@ -391,20 +244,20 @@
         <div class="pages-section">
             <h1 class="footer-logo">želtas</h1>
             <div class="pages">
-                <ul class="navigation">
+                <div class="navigation">
                     <p>Navigation</p>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="delivery.html">Delivery & Payment</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-                <ul class="collections">
+                </div>
+                <div class="collections">
                     <p>Collections</p>
                     <li><a href="collections/bracelets.html">Braceletes</a></li>
                     <li><a href="collections/rings.html">Rings</a></li>
                     <li><a href="collections/sculptures.html">Miniature Sculptures</a></li>
                     <li><a href="all_collections.html">All Collections</a></li>
-                </ul>
+                </div>
             </div>
         </div>
         <div class="working-info">
@@ -433,8 +286,8 @@
         </div>
     </div>
 </footer>
-<footer id="Intro-footer-mobile" class="Intro-footer-mobile">
-    <div class="pages-section">
+<footer id="Intro-footer-mobile">
+        <div class="pages-section">
         <h1 class="footer-logo">želtas</h1>
         <div class="pages">
             <ul class="navigation">
@@ -454,7 +307,7 @@
         </div>
     </div>
 
-    <div class="social-media-section">
+        <div class="social-media-section">
         <h1>+380 00 000 00 00</h1>
         <div class="social-media-buttons">
             <div class="sm-telegram sm-button"></div>
