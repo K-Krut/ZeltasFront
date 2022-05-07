@@ -10,6 +10,14 @@
     <link rel="stylesheet" type="text/css" href="css/lightslider.css"/>
     <script type="text/javascript" src="js/JQuery3.3.1.js"></script>
     <script type="text/javascript" src="js/lightslider.js"></script>
+    <script type="text/javascript" src="js/include-main.js"></script>
+    <script type="text/javascript"
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript"
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 </head>
 <body>
 <header class='nav-scrolled'>
@@ -42,106 +50,76 @@
 </header>
 <div class="body-class">
     <section class="Collections-slider">
-        <div class="container-products">
-            <div class="item-1 product-box product-bg-fade">
-                <h2 class="product-title">Sculptures</h2>
-                <img class="product-item" src="images/jewelry/mice1.png">
-            </div>
-            <div class="item-3 product-box product-bg-fade">
-                <h2 class="product-title">Braceletes</h2>
-                <img class="product-item" src="images/jewelry/bracelet_viking.png">
-            </div>
-            <div class="item-4 product-box product-bg-fade">
-                <h2 class="product-title">Necklaces</h2>
-                <img class="product-item" src="images/jewelry/sign.png">
-            </div>
-            <div class="item-2 product-box product-bg-fade">
-                <h2 class="product-title">Rings</h2>
-                <img class="product-item" src="images/jewelry/ring_viking.png">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="item-1 product-box product-bg-fade">
+                    <h2 class="product-title">Sculptures</h2>
+                    <img class="product-item" src="images/jewelry/mice1.png">
+                </div>
+                <div class="item-3 product-box product-bg-fade">
+                    <h2 class="product-title">Braceletes</h2>
+                    <img class="product-item" src="images/jewelry/bracelet_viking.png">
+                </div>
+                <div class="item-4 product-box product-bg-fade">
+                    <h2 class="product-title">Necklaces</h2>
+                    <img class="product-item" src="images/jewelry/sign.png">
+                </div>
+                <div class="item-2 product-box product-bg-fade">
+                    <h2 class="product-title">Rings</h2>
+                    <img class="product-item" src="images/jewelry/ring_viking.png">
+                </div>
             </div>
         </div>
         <div class="all-collection-title">
             <a href="all_collections.html"><h1>ALL COLLECTIONS</h1></a>
         </div>
-        <style>
-            .all-collection-title {
-                height: 300px;
-                position: relative;
-                text-align: center;
-                align-content: center;
-            }
-            .Collections-slider .container-products {
-                height: 600px;
-            }
-
-            .Collections-slider .all-collection-title h1 {
-                top: 45%;
-                position: relative;
-                font-family: GiovannaBold, sans-serif;
-                font-style: normal;
-                font-weight: 700;
-                font-size: 55px;
-                color: #A08A7E;
-            }
-
-            ul {
-                list-style: none;
-            }
-
-            a {
-                text-decoration: none;
-            }
-
-            .product-box {
-                width: 400px;
-                height: 550px; /*border-radius: 10px;*/
-                position: relative;
-                box-shadow: 8px 8px 5px 0px rgba(0, 0, 0, 0.25);
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                box-sizing: border-box;
-                margin: 20px 20px;
-            }
-
-            .product-bg-fade {
-                justify-content: center;
-                background-image: url("images/patterns/back_4_400_2.png");
-            }
-
-            .product-item {
-                height: 300px;
-                width: auto;
-                max-height: 100%;
-                max-width: 100%;
-                align-content: center;
-            }
-
-            .product-title {
-                position: relative;
-                top: -50px;
-                font-family: 'AverageRegular', sans-serif;
-                font-style: normal;
-                font-weight: 200;
-                font-size: 35px;
-                line-height: 40px;
-                color: #C7AB9B;
-                opacity: 0.8;
-            }
-
-            @media (max-width: 720px) {
-                .product-box {
-                    width: 94%;
-                    height: 500px;
-                }
-
-                .product-item {
-                    height: 250px;
-                }
-            }
-        </style>
         <script src="js/script.js" type="text/javascript"></script>
+        <style>
+            .container-fluid {
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                padding-right: 15px;
+                padding-left: 15px;
+                margin-right: auto;
+                margin-left: auto;
+            }
+
+            .p-lg-5 {
+                padding: 3rem !important
+            }
+
+            .pt-lg-5, .py-lg-5 {
+                padding-top: 3rem !important
+            }
+
+            .pr-lg-5, .px-lg-5 {
+                padding-right: 3rem !important
+            }
+
+            .pb-lg-5, .py-lg-5 {
+                padding-bottom: 3rem !important
+            }
+
+            .pl-lg-5, .px-lg-5 {
+                padding-left: 3rem !important
+            }
+
+
+            .row {
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                display: -ms-flexbox;
+                display: flex;
+                -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+                margin: -15px;
+            }
+
+
+
+        </style>
     </section>
 </div>
 <script src="js/main.js"></script>
@@ -168,7 +146,7 @@
     sectionObserved.observe(sectionIntro);
 
 </script>
-<footer class="Main-footer">
+<footer id="Main-footer" class="Main-footer">
     <div class="left-col-ft">
         <div class="pages-section">
             <h1 class="footer-logo">želtas</h1>
@@ -201,11 +179,40 @@
             </div>
         </div>
     </div>
-    <style>
-        .Main-footer .right-col-ft {
-            width: 50%;
-        }
-    </style>
+</footer>
+<footer id="Main-footer-mobile" class="Main-footer-mobile">
+    <div class="left-col-ft-mb">
+        <div class="pages-section-mb">
+            <h1 class="footer-logo">želtas</h1>
+            <div class="pages">
+                <ul class="navigation-mb">
+                    <p>Navigation</p>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html">About Us</a></li>
+                    <li><a href="index.html">Delivery & Payment</a></li>
+                    <li><a href="index.html">Contact Us</a></li>
+                </ul>
+                <ul class="collections-mb">
+                    <p>Collections</p>
+                    <li><a href="index.html">Braceletes</a></li>
+                    <li><a href="index.html">Rings</a></li>
+                    <li><a href="index.html">Miniature Sculptures</a></li>
+                    <li><a href="index.html">All Colletions</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="right-col-ft-mb">
+        <div class="social-media-section">
+            <h1>+380 00 000 00 00</h1>
+            <div class="social-media-buttons">
+                <div class="sm-telegram sm-button"></div>
+                <div class="sm-instagram sm-button"></div>
+                <div class="sm-facebook sm-button"></div>
+                <div class="sm-email sm-button"></div>
+            </div>
+        </div>
+    </div>
 </footer>
 </body>
 </html>
