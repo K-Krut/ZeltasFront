@@ -1008,11 +1008,18 @@ img {
 
 #Main-footer-mobile {
     display: none;
+    width: 100%;
 }
 .Product-Gallery {
     padding-top: 50px;
 }
+#mobile-navigation {
+    display: none;
+}
 
+#Product-mobile {
+    display: none;
+}
 /*****************************************************************************************************************/
 
 
@@ -1075,7 +1082,6 @@ img {
         font-size: 57px;
         text-align: center;
     }
-
 
     .left-col .text-section h1 {
         font-family: 'GiovannaBold', sans-serif;
@@ -1154,8 +1160,6 @@ img {
         width: 80%;
         left: 0;
     }
-
-
     .Collections-slider .product-box {
         width: 200px;
         height: 400px;
@@ -1164,15 +1168,13 @@ img {
     .Collections-slider .product-item {
         height: 50%;
     }
-
-    /*.Product-Gallery .row {*/
-    /*    position: relative;*/
-    /*    display: flex;*/
-    /*    margin-right: auto;*/
-    /*    margin-left: auto;*/
-    /*}*/
-
-
+    .Product-Gallery .navigation-collections {
+        width: 40%;
+    }
+    .Product-Gallery .item-gallery {
+        max-width: 270px;
+        max-height: 270px;
+    }
 }
 
 
@@ -1349,8 +1351,11 @@ img {
         display: none;
     }
     #Main-footer-mobile {
+        margin-bottom: 50px;
+        width: 100%;
         display: flex;
         flex-direction: column;
+        background-image: url("../images/patterns/waves_opacity_003.png");
     }
     #Main-footer-mobile .right-col-ft, .left-col-ft {
         width: 100%;
@@ -1372,14 +1377,8 @@ img {
         display: flex;
         margin-right: auto;
         margin-left: auto;
-        padding-top: 50px;
-        padding-bottom: 50px;
     }
-    .Product-Gallery .row {
-        position: relative;
-        display: flex;
-        margin-right: auto;
-        margin-left: auto;
+    .Collections-slider .row {
         padding-top: 50px;
         padding-bottom: 50px;
     }
@@ -1405,18 +1404,139 @@ img {
     }
     #Main-footer-mobile .pages {
         position: relative;
-        /*display: flex;*/
-        /*flex-direction: column;*/
     }
     #Main-footer-mobile .pages ul {
         padding-bottom: 50px;
     }
     #Main-footer-mobile {
         margin-top: 50px;
-        margin-bottom: 50px;
+        padding-bottom: 50px;
     }
     #Main-footer-mobile .footer-logo {
         padding-bottom: 50px;
+    }
+    .Product-Gallery .row {
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .Product-Gallery .text-section {
+        margin-left: 50px;
+    }
+    .Product-Gallery .item-gallery {
+        width: 300px;
+        height: 300px;
+    }
+    .right-col-item, .left-col-item {
+        display: none;
+    }
+    .item-slider {
+        position: relative;
+        align-items: center;
+        justify-content: center;
+    }
+    .Intro-product-slider  .item-slide, .rings, .big-ring {
+        width: 450px;
+        height: 450px;
+    }
+    .Intro-product-slider .rings {
+        width: 450px;
+        height: 450px;
+        position: relative;
+    }
+    .Intro-product-slider .item-slider {
+        width: 450px;
+        height: 450px;
+        position: relative;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .Intro-product-slider .small-ring {
+        width: 350px;
+        height: 350px;
+    }
+    #Product-page-products-slider {
+        display: none;
+    }
+    .Intro-product-slider {
+        height: 600px;
+    }
+    .logo h4 {
+        text-align: center;
+    }
+    #Product-mobile {
+        display: flex;
+        flex-direction: column;
+    }
+    #Product-mobile .intro-product-mb img {
+        width: 100%;
+        max-width: 425px;
+    }
+    #Product-mobile .product-info {
+        height: 600px;
+        align-items: center;
+        justify-content: center;
+    }
+    #Product-mobile .product-info .title {
+        margin: 100px auto 100px auto;
+    }
+    #Product-mobile .product-info h1 {
+        text-align: center;
+        font-family: 'AverageRegular';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 45px;
+        line-height: 39px;
+        color: #A08A7E;
+    }
+    #Product-mobile .product-info p {
+        font-family: 'AverageRegular';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 25px;
+        line-height: 24px;
+        margin-bottom: 25px;
+        color: #A08A7E;
+        opacity: .8;
+        margin-left: 100px;
+    }
+    #Product-mobile .product-info .info {
+        margin: 100px auto 100px auto;
+    }
+    #Product-mobile .buy-item {
+        position: relative;
+        right: 50px;
+        justify-content: center;
+    }
+
+    #Product-mobile .buy-item .price {
+        position: relative;
+    }
+    #Product-mobile .buy-item-mb  {
+        position: relative;
+        right: 100px;
+    }
+    #Product-mobile .buy-button-set {
+        position: absolute;
+        right: 0;
+        top: -50px;
+    }
+    #Product-mobile .buy-item-mb .price h1 {
+        text-align: center;
+        font-family: 'AverageRegular', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 29px;
+        color: rgba(250, 235, 226, 0.8);
+
+    }
+    #Product-mobile .buttons-section {
+        margin: auto;
+        position: relative;
+        height: 50px;
+        width: 300px;
+        justify-content: center;
     }
 
 }
@@ -1616,10 +1736,6 @@ img {
         padding-top: 50px;
         padding-bottom: 50px;
     }
-    .Product-Gallery .row {
-        padding-top: 50px;
-        padding-bottom: 50px;
-    }
 
 }
 
@@ -1760,8 +1876,8 @@ img {
     .Article-part .left-col {
         position: relative;
         display: flex;
-        min-height: 550px;
-        top: 425px;
+        min-height: 600px;
+        top: 400px;
         background-image: url("../images/patterns/waves_opacity_003_gradient_1.png");
     }
 
@@ -1819,6 +1935,10 @@ img {
         justify-content: center;
         align-content: center;
     }
+    #Main-footer-mobile .pages {
+        display: flex;
+        flex-direction: column;
+    }
 
     #Intro-footer-mobile .pages {
         position: relative;
@@ -1852,6 +1972,10 @@ img {
         color: #A08A7E;
     }
 
+    #Main-footer-mobile {
+        padding-bottom: 50px;
+        width: 100%;
+    }
     #Main-footer-mobile .social-media-section h1 {
         font-size: 25px;
     }
@@ -1865,9 +1989,19 @@ img {
     .Collections-slider .all-collection-title h1, a {
         font-size: 35px;
     }
+    #Intro-footer-mobile .social-media-section {
+        position: relative;
+        max-width: 400px;
+        bottom: 30px;
+    }
+    #Intro-footer-mobile .social-media-section h1 {
+        position: relative;
+        font-size: 40px;
+    }
     #Main-footer-mobile .right-col-ft-mb .social-media-section {
         width: 100%;
         position: relative;
+        top: 50px;
         justify-content: center;
         align-items: center;
         margin-right: auto;
@@ -1877,6 +2011,59 @@ img {
         position: relative;
         text-align: center;
     }
+    #main-navigation {
+        display: none;
+    }
+    #mobile-navigation {
+        display: flex;
+    }
+    .Product-Gallery .product-gallery-box {
+        display: flex;
+        flex-direction: column;
+    }
+    .Product-Gallery .navigation-collections {
+        width: 100%;
+    }
+    .Product-Gallery .container-fluid {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .Product-Gallery .text-section {
+        width: 80%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .Product-Gallery .text-block {
+        position: relative;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+    .Product-Gallery .text-block .text-block-rows {
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+    }
+    .Product-Gallery .text-block .text-block-rows .row-1 {
+        margin-right: 10%;
+    }
+
+    #Product-mobile .product-info .title {
+        margin: 100px auto 100px auto;
+    }
+    #Product-mobile .product-info h1 {
+        font-size: 35px;
+    }
+    #Product-mobile .product-info p {
+        font-size: 18px;
+        margin-left: 50px;
+    }
+    .buy-item-mb {
+        position: absolute;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
 }
 
 
@@ -2040,27 +2227,6 @@ img {
         height: 75px;
     }
 
-    #Intro-footer-mobile {
-        height: 800px;
-        margin-top: 100px;
-        position: relative;
-        overflow: hidden;
-    }
-
-    #Intro-footer-mobile .pages-section {
-        margin: 150px auto 0 auto;
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-content: center;
-    }
-
-    #Intro-footer-mobile .pages {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-    }
 
     .pages .collections {
         margin-top: 50px;
@@ -2103,16 +2269,40 @@ img {
         font-size: 25px;
     }
 
-    #Main-footer-mobile .social-media-section h1 {
+    #Intro-footer-mobile {
+        margin-top: 150px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    #Intro-footer-mobile .pages-section {
+        margin: 200px auto 0 auto;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+    }
+
+    #Intro-footer-mobile .pages {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #Intro-footer-mobile .social-media-section h1 {
         font-size: 25px;
         line-height: 50px;
     }
 
-    #Main-footer-mobile .social-media-buttons .sm-button {
-        width: 40px;
-        height: 40px;
+    #Intro-footer-mobile .social-media-section {
+        max-width: 350px;
+        bottom: 20px;
+        position: relative;
+        justify-content: center;
+        margin-right: auto;
+        margin-left: auto;
     }
-
 
 }
 
