@@ -1005,6 +1005,69 @@ img {
     color: #C7AB9B;
     opacity: 0.8;
 }
+.price {
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+}
+
+.price h1, h2, h3 {
+    font-family: 'Giovanna', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    color: #D5C7BF;
+}
+
+.product-title {
+    position: relative;
+    font-family: 'AverageRegular', sans-serif;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 20px;
+    color: #A08A7E;
+    top: 15px;
+}
+
+.details h1 {
+    font-family: 'AverageRegular', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    color: #D2A88F;
+    text-align: left;
+}
+
+.container-fluid {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.p-lg-5 {
+    padding: 3rem !important
+}
+
+.pt-lg-5, .py-lg-5 {
+    padding-top: 3rem !important
+}
+
+.pr-lg-5, .px-lg-5 {
+    padding-right: 3rem !important
+}
+
+.pb-lg-5, .py-lg-5 {
+    padding-bottom: 3rem !important
+}
+
+.pl-lg-5, .px-lg-5 {
+    padding-left: 3rem !important
+}
 
 #Main-footer-mobile {
     display: none;
@@ -1176,7 +1239,6 @@ img {
         max-height: 270px;
     }
 }
-
 
 @media screen and (max-width: 768px) {
     .body {
@@ -1538,9 +1600,11 @@ img {
         width: 300px;
         justify-content: center;
     }
+    .title-in-progress {
+        font-size: 45px;
+    }
 
 }
-
 
 @media (max-width: 721px) {
     .body {
@@ -1738,7 +1802,6 @@ img {
     }
 
 }
-
 
 @media (max-width: 430px) {
     .body {
@@ -2028,6 +2091,9 @@ img {
         padding-top: 50px;
         padding-bottom: 50px;
     }
+    .Product-Gallery .collection-title h1 {
+        font-size: 60px;
+    }
     .Product-Gallery .text-section {
         width: 80%;
         margin-right: auto;
@@ -2063,9 +2129,11 @@ img {
         margin-right: auto;
         margin-left: auto;
     }
+    .title-in-progress {
+        font-size: 30px;
+    }
 
 }
-
 
 @media (max-width: 380px) {
     .body {
@@ -2302,6 +2370,10 @@ img {
         justify-content: center;
         margin-right: auto;
         margin-left: auto;
+    }
+
+    .title-in-progress {
+        font-size: 30px;
     }
 
 }
