@@ -1520,6 +1520,10 @@ img {
     #Product-page-products-slider {
         display: none;
     }
+    .Intro .rings {
+        position: relative;
+        justify-content: center;
+    }
     .Intro-product-slider {
         height: 600px;
     }
