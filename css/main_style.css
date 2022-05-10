@@ -1252,6 +1252,10 @@ img {
         align-content: center;
         justify-content: center;
     }
+    .Intro .card .rings {
+        margin-left: auto;
+        margin-right: auto;
+    }
 
     .container {
         position: absolute;
@@ -1520,10 +1524,6 @@ img {
     #Product-page-products-slider {
         display: none;
     }
-    .Intro .rings {
-        position: relative;
-        justify-content: center;
-    }
     .Intro-product-slider {
         height: 600px;
     }
@@ -1630,6 +1630,7 @@ img {
         width: 450px;
         height: 450px;
     }
+
 
     .big-ring {
         width: 450px;
